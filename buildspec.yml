@@ -9,9 +9,9 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
-      - docker build -t <your-image-name> .
-      - docker tag <your-image-name>:latest <your-ecr-repository>:latest
+      - docker build -t udacitydevopsrt .
+      - docker tag udacitydevopsrt:latest 947695616581.dkr.ecr.us-east-1.amazonaws.com/udacitydevopsrt:latest
   post_build:
     commands:
       - echo Pushing the Docker image to Amazon ECR...
-      - docker push <your-ecr-repository>:latest
+      - docker push 947695616581.dkr.ecr.us-east-1.amazonaws.com/udacitydevopsrt:latest
